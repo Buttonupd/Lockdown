@@ -1,5 +1,6 @@
 import unittest
 from credentials import Credential
+import pyperclip
 
 
 class TestCredential(unittest.TestCase):
@@ -51,6 +52,15 @@ class TestCredential(unittest.TestCase):
 
         credential_exists = Credential.credential_exist("Marcus")
         self.assertTrue(credential_exists)
+
+    def test_display_all_credentials(self):
+
+        self.assertEqual(Credential.display_credentials(), Credential.credential_list)
+
+    def test_copy_first_name(self):
+        self.new_credential.save_credential()
+        Credential.copy_first_name("Marcus")
+        self.assertEqual(self.new_credential.first_name, pyperclip.paste())
 
 
 if __name__ == '__main__':
