@@ -33,7 +33,7 @@ class Credential:
     def display_credentials(cls):
         return cls.credential_list
 
-    @classmethod
-    def copy_first_name(cls, first_name):
-        credential_found = Credential.find_by_first_name(first_name)
-        pyperclip.copy(credential_found.first_name)
+    # @classmethod
+    # def copy_first_name(cls, last_name):
+    #     credential_found = Credential.find_by_first_name(last_name)
+    #    pyperclip.copy(cre)

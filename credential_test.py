@@ -57,11 +57,12 @@ class TestCredential(unittest.TestCase):
 
         self.assertEqual(Credential.display_credentials(), Credential.credential_list)
 
-    def test_copy_first_name(self):
-        self.new_credential.save_credential()
-        Credential.copy_first_name("Marcus")
-        self.assertEqual(self.new_credential.first_name, pyperclip.paste())
+    # def test_copy_last_name(self):
+    #     self.new_credential.save_credential()
+    #     Credential.copy_last_name("Diamonds")
+    #     self.assertEqual(self.new_credential.last_name, pyperclip.paste())
 
 
 if __name__ == '__main__':
     unittest.main()
+
