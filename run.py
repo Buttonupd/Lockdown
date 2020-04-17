@@ -48,7 +48,6 @@ def display_user():
 
 
 def main():
-    
     print("Welcome to Locked-In. From the list of predetermined commands, choose one or more")
     while True:
         print("Basic Commands: \n can - create a new_user account with a user_defined password\n cag- create a new "
