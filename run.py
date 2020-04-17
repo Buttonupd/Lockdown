@@ -6,56 +6,69 @@ import random
 
 
 def create_credential(fname, lname, password):
+    """A functions which allows users to create new credentials"""
     new_credential = Credential(fname, lname, password)
     return new_credential
 
 
 def create_user(fname, lname, phone, email):
+    """This a function which gives users the ability to create new user accounts"""
     new_user = User(fname, lname, phone, email)
     return new_user
 
 
 def save_credentials(credential):
+    """This is a subsequent function which optimizes application performance by enhancing several different features
+    as saving a variety of credentials and user details """
     credential.save_credential()
 
 
 def save_user(user):
+    """Almost similar to the class above, this saves user/s details"""
     user.save_user_details()
 
 
 def del_contact(credential):
+    """This class gives the application the ability to delete different user inputs or details"""
     credential.delete_credential()
 
 
 def del_user(user):
+    """This class gives the application the ability to delete different user inputs or details"""
     user.delete_user()
 
 
 def user_log_in(name, password):
-    '''
+    """
     Function that allows a user to log into their credential account
     Args:
         name : the name the user used to create their user account
         password : the password the user used to create their user account
-    '''
+    """
     log_in = User.log_in(name, password)
-    if log_in != False:
+    if log_in:
         return User.log_in(name, password)
 
 
 def find_first_name(credential):
+    """ A user can use this feature to locate account details by first_name if for some reason the rest is vague"""
     return Credential.find_by_first_name(credential)
 
 
 def check_existing_credentials(credential):
+    """Another exciting class gives users the privilege to check whether certain accounts, names or other details
+    exist """
     return Credential.credential_exist(credential)
 
 
 def display_credentials():
+    """Depending on existing credentials, a user can utilize this feature because it does display the number of
+    credentials available """
     return Credential.display_credentials()
 
 
 def display_user():
+    """This class has the power to display users credentials"""
     return User.display_users()
 
 

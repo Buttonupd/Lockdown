@@ -7,7 +7,7 @@ class TestUser(unittest.TestCase):
 
     def setUp(self):
         """
-        Set up method to run before each test cases.
+        Set up method to run before each test case/s
         """
         self.new_user = User("Button", "Up", "0712345678", "button@mail.com")  # create user object
 
@@ -19,7 +19,7 @@ class TestUser(unittest.TestCase):
 
     def test_init(self):
         """
-        test_init test case to test if the object is initialized properly
+        test_init test case to test if object utilizes proper instantiation
         """
         self.assertEqual(self.new_user.first_name, "Button")
         self.assertEqual(self.new_user.last_name, "Up")
@@ -28,16 +28,16 @@ class TestUser(unittest.TestCase):
 
     def test_save_user(self):
         """
-        test_save_user test case to test if the user object is saved into
-         the users array
+         test case to test if the user object is saved in
+         users array
         """
         self.new_user.save_user_details()  # saving the new user
         self.assertEqual(len(User.users_array), 1)
 
     def test_save_multiple_users(self):
         """
-        test_save_multiple_users to check if we can save multiple users
-        to our users_array
+
+            this test-case method gives users the ability to save multiple account details
         """
         self.new_user.save_user_details()
         test_user = User("Test", "user", "0712345678", "test@user.com")  # new user
