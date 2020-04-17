@@ -86,4 +86,4 @@ def main():
                 print("I really didn't get that. Please use the short codes")
 
 
-
+main()
