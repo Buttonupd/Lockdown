@@ -31,6 +31,18 @@ def del_user(user):
     user.delete_user()
 
 
+def user_log_in(name, password):
+    '''
+    Function that allows a user to log into their credential account
+    Args:
+        name : the name the user used to create their user account
+        password : the password the user used to create their user account
+    '''
+    log_in = User.log_in(name, password)
+    if log_in != False:
+        return User.log_in(name, password)
+
+
 def find_first_name(credential):
     return Credential.find_by_first_name(credential)
 
@@ -51,7 +63,8 @@ def main():
     print("Welcome to Locked-In. From the list of predetermined commands, choose one or more")
     while True:
         print("Basic Commands: \n can - create a new_user account with a user_defined password\n cag- create a new "
-              "auto-generated password\n cad - display all user accounts \n ex -exit the contact "
+              "auto-generated password\n  lg - log into your Password Locker account \n cad - display all user "
+              "accounts \n ex -exit the contact "
               "list \n")
         short_code = input().lower()
 
@@ -86,6 +99,23 @@ def main():
             print(f"A new {site} account by {f_name} successfully has been created")
             print(f"The user-name is {user_name} and the password is {password} ")
             print("\n")
+
+        elif short_code == 'lg':
+            '''
+            Logs in the user into their Password Locker account
+            '''
+            print("\n")
+            print("Log into Password Locker Account")
+            print("Enter the user name")
+            user_name = input()
+
+            print("Enter the password")
+            user_password = input()
+
+            if user_log_in(user_name, user_password) is None:
+                print("\n")
+                print("Please try again or create an account")
+                print("\n")
 
         elif short_code == "cag":
             print("New user")

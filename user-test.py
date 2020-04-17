@@ -1,5 +1,6 @@
 import unittest
 from user import User
+from credentials import Credential
 
 
 class TestUser(unittest.TestCase):
@@ -42,6 +43,22 @@ class TestUser(unittest.TestCase):
         test_user = User("Test", "user", "0712345678", "test@user.com")  # new user
         test_user.save_user_details()
         self.assertEqual(len(User.users_array), 2)
+
+    def test_log_in(self):
+        '''
+        Test case to test if a user can log into their credentials
+        '''
+
+        # Save the new user
+        self.new_user.save_user_details()
+
+        test_user = User("Button", "Up", "0712345678", "button@mail.com")
+
+        test_user.save_user_details()
+
+        found_credential = User.log_in("Button", "Up")
+
+        self.assertEqual(found_credential, Credential.credential_list)
 
     def test_display_all_users(self):
         """
