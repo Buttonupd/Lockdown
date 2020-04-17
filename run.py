@@ -95,7 +95,7 @@ def main():
             l_name = input()
 
             print("Phone Number")
-            p_number = input()
+            p_number = int(input())
 
             print("Email address")
             e_address = input()
@@ -140,11 +140,11 @@ def main():
             print("First name ....")
             f_name = input()
 
-            print("Lat name .....")
+            print("Last name .....")
             l_name = input()
 
             print("Phone Number.....")
-            p_number = input()
+            p_number = int(input())
 
             print("Email Address")
             e_address = input()
