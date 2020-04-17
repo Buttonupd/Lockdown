@@ -6,11 +6,12 @@ class User:
 
     users_array = []
 
-    def __init__(self, first_name, last_name, phone_number, email):
+    def __init__(self, first_name, last_name, phone_number, email, login):
         self.first_name = first_name
         self.last_name = last_name
         self.phone_number = phone_number
         self.email = email
+        self.login = login
 
     def save_user_details(self):
         """
@@ -24,3 +25,7 @@ class User:
         method that returns the class array
         """
         return cls.users_array
+
+
+
+

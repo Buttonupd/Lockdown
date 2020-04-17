@@ -42,11 +42,13 @@ def check_existing_credentials(credential):
 def display_credentials():
     return Credential.display_credentials()
 
+
 def display_user():
     return User.display_users()
 
 
 def main():
+    
     print("Welcome to Locked-In. From the list of predetermined commands, choose one or more")
     while True:
         print("Basic Commands: \n can - create a new_user account with a user_defined password\n cag- create a new "
@@ -80,7 +82,7 @@ def main():
             password = input()
 
             save_user(create_user(f_name, l_name, p_number, e_address))
-            save_credentials(create_credential(f_name, l_name, password ))
+            save_credentials(create_credential(f_name, l_name, password))
             print("\n")
             print(f"A new {site} account by {f_name} successfully has been created")
             print(f"The user-name is {user_name} and the password is {password} ")
@@ -122,11 +124,22 @@ def main():
                 print("\n")
 
                 for user in display_user():
-                   print(f"{user.first_name} {user.last_name} has credentials for this {site}")
+                    print(f"{user.first_name} {user.last_name} has credentials for this {site}")
                 print("\n")
+            else:
+                print("\n")
+                print("It looks like no account credentials exist at the moment. Consider creating one or more ")
+                print("\n")
+        elif short_code == "ex":
+            print("Bye ...")
+            break
+        else:
+            print("Invalid command")
 
 
-main()
+if __name__ == '__main__':
+    main()
+
 #     print(" Hello, welcome to your credential list. What is your name? ")
 #     user_name = input()
 #     print(f"Hello {user_name}. What would you like to do")
