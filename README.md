@@ -8,6 +8,7 @@ Author
     By Dan Kariuki
     
 Description
+
     This application lets users store various accounts information. The application runs on the terminal and the user navigates through     the app by using predetermined short codes.
     
 Developers content
