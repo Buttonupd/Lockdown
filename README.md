@@ -9,6 +9,10 @@ Author
     
 Description
     This application lets users store various accounts information. The application runs on the terminal and the user navigates through     the app by using predetermined short codes.
+    
+Developers content
+
+    Dankariuki0101@gmail.com
 
 The short codes are:
     can - create a new_user account with a user_defined password\n
