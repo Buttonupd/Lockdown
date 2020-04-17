@@ -29,7 +29,7 @@ User Stories
     Generate a password for a new credential
 
 Specifications
-    Behavior	        Input	         Outcome
+        Behavior	        Input	         Outcome
     
     Create an account	User Name      Cringe_man
     
